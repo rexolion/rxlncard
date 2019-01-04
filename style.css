@@ -1,17 +1,39 @@
+/* Universal */
 html, body{
     border: 0;
     margin: 0;
-    overflow: hidden;
     font-family: sans-serif;
 }
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Header {
+    font-size: 6em;
+    color: #ffffff;
+    white-space: nowrap;
+}
 .Container {
+    color: #fff;
+    text-align: center;
+    margin: 0px;
+    font-size: 8pt;
+    overflow-x: hidden;
+}
+.Wrap {
     height: 100vh;
     min-height: 600px;
     position: relative;
+    text-align: center;
+}
+
+/* Card */
+.Card-wrap {
     background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url(forest.webp);
     background-size: cover;
     background-position: 50%;
-    text-align: center;
 
 }
 
@@ -26,15 +48,41 @@ html, body{
     min-height: 100px;
 }
 
-.Card-header{
-    font-size: 6em;
-    color: #ffffff;
-    white-space: nowrap;
-
-}
 .Card-details {
     font-size: 3em;
     color: #ffffff;
 }
+.Card-button-more {
+    border-image: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea); 
 
+    background: transparent;
+    height: 8vh;
+    width: 30vw;
+    border-image-slice: 1;
+    border-width: 5px;
+    font-size: 3rem;
+    color: #ffffff;
+
+}
+.Card-button-more::after {
+    border-radius: 30px;
+}
+
+/* About page */
+.About-wrap {
+   
+
+}
+.About {
+    position: absolute;
+    max-width: 1200px;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.About-header {
+    color: #000000;
+}
 
