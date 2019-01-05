@@ -1,4 +1,6 @@
+
 /* Universal */
+
 html, body{
     border: 0;
     margin: 0;
@@ -28,7 +30,15 @@ html, body{
     position: relative;
     text-align: center;
 }
-
+.Label {
+    font-size: 14pt;
+    font-weight: 500;
+}
+.Label_bold {
+    font-size: 14pt;
+    font-weight: 700;
+    color: #000000; 
+}
 /* Card */
 .Card-wrap {
     background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url(forest.webp);
@@ -84,5 +94,18 @@ html, body{
 }
 .About-header {
     color: #000000;
+}
+.Icons-wrap {
+    display: flex;
+
+}
+.Bullet-wrap {
+    height: 200px;
+    width: 200px;
+    justify-content: flex-start;
+}
+.Icon_lg {
+    height: 200px;
+    width: 200px;
 }
 
