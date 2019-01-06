@@ -6,6 +6,9 @@ html, body{
     margin: 0;
     font-family: sans-serif;
 }
+a {
+    transition: all 0.2s linear;
+}
 .flex {
     display: flex;
     flex-direction: column;
@@ -14,15 +17,15 @@ html, body{
 }
 .Header {
     font-size: 6em;
-    color: #ffffff;
+    color: #000000;
     white-space: nowrap;
 }
 .Container {
-    color: #fff;
     text-align: center;
     margin: 0px;
     font-size: 8pt;
     overflow-x: hidden;
+    line-height: 18pt;
 }
 .Wrap {
     height: 100vh;
@@ -35,9 +38,10 @@ html, body{
     font-weight: 500;
 }
 .Label_bold {
-    font-size: 14pt;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #000000; 
+    margin: 15px 0 5px 0;
 }
 /* Card */
 .Card-wrap {
@@ -45,6 +49,37 @@ html, body{
     background-size: cover;
     background-position: 50%;
 
+}
+.Para {
+    font-size: 1rem;
+}
+
+.Para-left {
+    text-align: right;
+    font-size: 38px;
+    line-height: 42px;
+    font-weight: 700;
+    display: inline-block;
+    width: 250px;
+    padding-right: 5px;
+}
+.Para-right {
+    display: inline-block;
+    width: 450px;
+    text-align: left;
+    font-size: 25px;
+}
+a[ id= "about" ]:target ~ #main section.About {
+    -webkit-transform: translateY( 0px);
+    transform: translateY( 0px );
+}
+.trans {
+    -webkit-transform: translateZ( 0 );
+    transform: translateZ( 0 );
+    -webkit-transition: -webkit-transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .Card {
@@ -57,23 +92,32 @@ html, body{
     height: 40vh;
     min-height: 100px;
 }
+.Header-card {
+    color: #ffffff;
+}
 
 .Card-details {
     font-size: 3em;
     color: #ffffff;
 }
 .Card-button-more {
-    border-image: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea); 
-
-    background: transparent;
+    border: 5px solid #ffffff;
+    border-image: none;
+    cursor: pointer;
     height: 8vh;
     width: 30vw;
+    background-color: transparent;
     border-image-slice: 1;
-    border-width: 5px;
     font-size: 3rem;
     color: #ffffff;
-
+    transition: .5s;
+    
 }
+.Card-button-more:hover {
+    background-color: #834d9b;
+    border-color: #834d9b;
+}
+
 .Card-button-more::after {
     border-radius: 30px;
 }
@@ -86,7 +130,7 @@ html, body{
 .About {
     position: absolute;
     max-width: 1200px;
-    height: 50%;
+    height: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -97,15 +141,95 @@ html, body{
 }
 .Icons-wrap {
     display: flex;
-
+    height: 400px;
 }
 .Bullet-wrap {
-    height: 200px;
-    width: 200px;
     justify-content: flex-start;
+    height: 300px;
 }
 .Icon_lg {
-    height: 200px;
-    width: 200px;
+    height: 22vh;
+    width: 19vw;
+}
+.Para-about { 
+    position: relative;
+    width: 100%;
+    height: 400px;
+
 }
 
+/* Buttons */
+body {
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+}
+.Button-half {
+    height: 400px;
+    margin: 0;
+    border: 0;
+    display: inline-block;
+    width: 50%;
+    
+}
+
+.Button-left {
+  position: relative;
+  
+}
+.Button-right {
+  background: linear-gradient(to right, #834d9b, #d04ed6); 
+  position: relative;
+}
+.Button-circle {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+border:5px solid ;  
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  background: transparent;
+  transition:all .5s ease;
+}
+.Button-circle_purp {
+      border-image-slice: 1;
+   border-color: #834d9b; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.Button-circle_wh {
+  border-color: white;
+  border-image-slice: 1;
+}
+
+.Button-left:hover .Button-circle_purp {
+  border-radius: 0;
+  transition: border-radius .5s;
+}
+.Button-left:hover:after .Button-circle_purp {
+    transition: border-radius .5s;
+  }
+.Button-right:hover .Button-circle_wh {
+  border-radius: 0;
+  transition: border-radius .5s;
+}
+.Button-text {
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 60px;  
+  transform: translate(-50%,-50%);
+  text-align: center;
+  
+}
+
+.Button-text_right {
+  color: #FFFFFF;
+}
+
+.Button-text_left {
+  color: #834d9b ;
+}

@@ -1,4 +1,4 @@
-<!Doctype <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -11,22 +11,24 @@
 </head>
 
 <body>
-    <main class="Container">
+    <main id="main" class="Container">
         <div class="Wrap Card-wrap">
             <section class="Card flex">
-                <header class="Header">
+                <header class="Header Header-card">
                     Hi! I'm Artyom
                 </header>
                 <p class="Card-details">
                     I frontend developer
                 </p>
-                <button class="Card-button-more">
+                <a href="#about">
+                    <button class="Card-button-more">
                     About me
                 </button>
+                </a>
             </section>
         </div>
         <div class="Wrap About-wrap">
-            <section class="About flex">
+            <section id="about" class="About flex trans">
 
                 <div class="Icons-wrap">
                     <div class="flex Bullet-wrap">
@@ -34,29 +36,45 @@
                         <div class="Label_bold">
                             Responsive
                         </div>
-                        div.
+                        <div class="Para">I love make websites that looks cool on all devices</div>
                     </div>
                     <div class="flex Bullet-wrap">
                         <img class="Icon_lg" src="performance.svg" alt="I'm like fast websites" />
                         <div class="Label_bold">
                             Performance
                         </div>
+                        <div class="Para">I love make websites that looks cool on all devices</div>
                     </div>
                     <div class="flex Bullet-wrap">
                         <img class="Icon_lg" src="intuitive.svg" alt="I'm like intuitive design" />
                         <div class="Label_bold">
                             Intuitive
                         </div>
+                        <div class="Para">I love make websites that looks cool on all devices</div>
                     </div>
                     <div class="flex Bullet-wrap">
                         <img class="Icon_lg" src="fromScratch.svg" alt="I'm like make projects from scratch" />
                         <div class="Label_bold">
                             From scratch
                         </div>
+                        <div class="Para">I love make websites that looks cool on all devices</div>
                     </div>
-
+                </div>
+                <div class="Para-about Para">
+                    <div class="Para-left">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </div>
+                    <div class="Para-right">
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                    </div>
                 </div>
             </section>
+        </div>
+  <div class="Button-half Button-left"><div class="Button-circle Button-circle_purp center"><div class="Button-text Button-text_left">Skills</div></div>
+</div><!--
+--><div class="Button-half Button-right"><div class="Button-circle Button-circle_wh"><div class="Button-text Button-text_right">Projects</div></div></div>
+
+                </div>
         </div>
     </main>
 </body>
