@@ -11,6 +11,7 @@
  html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
+    scroll-behavior: smooth;
   }
   
   /* Sections
@@ -210,6 +211,18 @@
     border-style: none;
     padding: 0;
   }
+  ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+
+  }
+  li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+
   
   /**
    * Restore the focus styles unset by the previous rule.
