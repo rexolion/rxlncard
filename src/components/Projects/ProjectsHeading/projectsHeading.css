@@ -1,0 +1,25 @@
+.Heading-projects_bg {
+    font-weight: 500;
+    text-align: center;
+    font-size: calc(30px + (54 - 30) * ((100vw - 300px) / (1600 - 300)));
+}
+  .Heading-projects_bg a{
+      text-decoration: none;
+  }
+  .center_margin {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .Icon-arrow_down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    border: solid 10px black;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 13px;
+    margin: 0 0 8px 22px;
+ }

@@ -1,0 +1,7 @@
+.Projects-blocks {
+    display: grid;
+    grid-auto-rows: 300px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
+    grid-auto-flow: dense;
+  }

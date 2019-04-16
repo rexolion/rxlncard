@@ -1,0 +1,5 @@
+.Text-heading_md {
+    margin: 0 0 .3em 0 !important;
+    font-weight: 500;
+    font-size: calc(30px + (73 - 30) * ((100vw - 300px) / (1600 - 300)));
+}

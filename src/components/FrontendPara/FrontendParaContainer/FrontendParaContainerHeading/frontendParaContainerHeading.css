@@ -1,0 +1,7 @@
+.Frontend-para-heading {
+    display: inline-flex;
+    width: fit-content;
+    font-size: calc(32px + (54 - 32) * ((100vw - 300px) / (1600 - 300)));
+        margin: 0 10px .625em 0;
+    font-weight: 500;
+}

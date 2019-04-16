@@ -1,0 +1,8 @@
+.Hero-wrap {
+    /* url("assets/sky.webp" */
+    background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6));
+    background-size: cover;
+    background-position: 50%;
+    height: 100vh;
+    background-attachment: fixed;
+}

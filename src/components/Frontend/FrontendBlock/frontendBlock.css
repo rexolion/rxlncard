@@ -1,0 +1,12 @@
+.Frontend-block {
+    height: 100vh;
+    color: #ffffff;
+    display: flex;
+    margin: 0;
+}
+.Frontend-block_bl.Frontend-block_bl {
+    min-height: 50vh;
+    background-color: black;
+    height: auto;
+
+}

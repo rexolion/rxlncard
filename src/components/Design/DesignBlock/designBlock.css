@@ -1,0 +1,12 @@
+.Design-block_purp.Design-block_purp {
+    background-color: #A952FF;
+    min-height: 50vh;
+    height: auto;
+}
+
+.Design-block {
+    height: 100vh;
+    color: #ffffff;
+    display: flex;
+    margin: 0;
+}

@@ -1,0 +1,7 @@
+.Projects-blocks-wrap {
+}
+.center_flex {
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}

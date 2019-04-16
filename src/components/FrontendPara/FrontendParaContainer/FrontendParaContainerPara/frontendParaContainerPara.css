@@ -1,0 +1,7 @@
+.Frontend-para-para {
+    display: inline-flex;
+    width: 25vw;
+    font-size: calc(22px + (24 - 22) * ((100vw - 300px) / (1600 - 300)));
+    color: #606060;
+
+}
