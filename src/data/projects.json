@@ -1,0 +1,74 @@
+ [
+        {
+          "name": "Polly website",
+          "description": "Modern e-commerce website for Polly",
+          "type": "website",
+          "technologies": ["gatsby", "react", "graphql"],
+          "company": "Polly",
+          "previewImg": "pollyPreview.jpg"
+          
+        },
+        {
+          "name": "Polly UI kit",
+          "description": "Stylish ui-kit for Polly",
+          "type": "design",
+          "technologies": ["figma", "illustrator"],
+          "company": "Polly",
+          "previewImg": "pollyUi.jpg"
+          
+        },
+        {
+          "name": "Meetingz",
+          "description": "Stylish mobile app for Meetingz",
+          "type": "design",
+          "technologies": ["figma", "illustrator"],
+          "company": "Meetingz",
+          "previewImg": "prev.png"
+          
+        },
+        {
+          "name": "Cake pattern",
+          "description": "Amazing pattern for cake company",
+          "type": "design",
+          "technologies": ["figma", "illustrator"],
+          "company": "",
+          "previewImg": "16643351-seamless-cake-pattern-cartoon-vector-illustration.jpg"
+          
+        },
+        {
+          "name": "Fitless",
+          "description": "Amazing design of amazing fitness company",
+          "type": "design",
+          "technologies": ["figma", "illustrator"],
+          "company": "Fitless",
+          "previewImg": "personal_fitness_trainer_app_2x.png"
+          
+        },
+        {
+          "name": "Mentor tribe",
+          "description": "Design of mentor social network",
+          "type": "design",
+          "technologies": ["figma", "illustrator"],
+          "company": "Mentor tribe",
+          "previewImg": "dribbble.png"
+          
+        },
+        {
+          "name": "AutoAmbulance",
+          "description": "Design of AutoAmbulance",
+          "type": "design",
+          "technologies": ["figma", "illustrator"],
+          "company": "AutoAmbulance",
+          "previewImg": "black-and-white-car-classic-474.jpg"
+          
+        },
+        {
+          "name": "Bay king",
+          "description": "Design of Bay king",
+          "type": "design",
+          "technologies": ["figma", "illustrator"],
+          "company": "Bay king",
+          "previewImg": "baking-christmas-cookies-cookies-752503.jpg"
+          
+        }
+]

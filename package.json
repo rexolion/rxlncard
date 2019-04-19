@@ -7,16 +7,20 @@
   "dependencies": {
     "@types/react-dom": "^16.8.4",
     "@types/react-helmet": "^5.0.8",
+    "@types/react-redux": "^7.0.6",
     "gatsby": "^2.3.16",
     "gatsby-image": "^2.0.37",
     "gatsby-plugin-manifest": "^2.0.28",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-react-svg": "^2.1.1",
     "gatsby-plugin-sharp": "^2.0.32",
     "gatsby-plugin-tslint": "0.0.2",
     "gatsby-plugin-typescript": "^2.0.12",
     "gatsby-source-filesystem": "^2.0.29",
+    "gatsby-transformer-json": "^2.1.11",
     "gatsby-transformer-sharp": "^2.1.17",
+    "graphql": "^14.2.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -27,8 +31,12 @@
     "typescript": "^3.4.3"
   },
   "devDependencies": {
+    "@graphql-codegen/typescript": "1.0.7",
+    "@graphql-codegen/typescript-operations": "1.0.7",
+    "@graphql-codegen/typescript-react-apollo": "1.0.7",
     "@types/react": "^16.8.13",
     "prettier": "^1.16.4",
+    "redux-devtools-extension": "^2.13.8",
     "tslint": "^5.15.0",
     "tslint-config-airbnb": "^5.11.1",
     "tslint-react": "^4.0.0"
@@ -47,7 +55,8 @@
     "type-check": "tsc --noEmit",
     "lint": "tslint --project .",
     "preDeploy": "gatsby build --prefix-paths",
-    "deploy": "npm run preDeploy && gh-pages -d public"
+    "deploy": "npm run preDeploy && gh-pages -d public",
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "repository": {
     "type": "git",
