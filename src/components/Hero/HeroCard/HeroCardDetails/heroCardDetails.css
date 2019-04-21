@@ -1,7 +1,7 @@
 
 .Card-details {
-    font-size: calc(15px + (25 - 15) * ((100vw - 300px) / (1600 - 300)));
-        color: #ffffff;
+    font-size: calc(15px + (20 - 15) * ((100vw - 300px) / (1600 - 300)));
+    color: #ffffff;
     white-space: nowrap;
 
 }

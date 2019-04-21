@@ -1,5 +1,9 @@
 .Footer {
-    height: 200px;
-    background-color: #000000;
+    height: 35vh;
+    background-color: #101010;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }

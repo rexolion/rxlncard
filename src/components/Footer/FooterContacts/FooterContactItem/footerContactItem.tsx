@@ -10,9 +10,9 @@ export interface FooterContactItemProps {
 
 const FooterContactItem:React.SFC<FooterContactItemProps> = ({ link, children }) => (
     <a href={link}>
-                <li className="Footer-contacts-item">
+                <div className="Footer-contacts-item">
                     {children}
-                </li>
+                </div>
     </a>
 );
 

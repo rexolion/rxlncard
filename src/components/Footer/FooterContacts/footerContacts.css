@@ -5,8 +5,8 @@
   }
   .Footer-contacts-item{
     display: inline-block;
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
     margin-right: 20px;
     border-radius: 10px 0 10px 10px;
   }

@@ -7,60 +7,42 @@ import './projectsHeading.css';
 export interface ProjectsHeadingProps {
   openProjectsDropdown: (arg0: boolean) => void;
   changeProjectsGrid: (arg0: string) => void;
+  projectsGrid?: string;
 }
 
-export interface ProjectsHeadingState {
-  isOpen: boolean;
-}
-
-class ProjectsHeadingConnected extends React.Component<ProjectsHeadingProps, ProjectsHeadingState> {
+class ProjectsHeadingConnected extends React.Component<ProjectsHeadingProps> {
   constructor(props: ProjectsHeadingProps) {
     super(props);
-    this.state = {
-      isOpen: false,
-    };
   }
 
-  public handleDeveloperClick = () => {
-    this.props.changeProjectsGrid('Developer');
+  public invertGrid = (grid: string | undefined) => grid === 'Designer' ? 'Developer' : 'Designer';
+
+  public changeGrid = () => {
+    const invertedGrid = this.invertGrid(this.props.projectsGrid);
+    this.props.changeProjectsGrid(invertedGrid);
   }
 
-  public handleDesignerClick = () => {
-    this.props.changeProjectsGrid('Designer');
-  }
+  public render(): JSX.Element {
+    const { projectsGrid } = this.props;
 
-  public toogleList = () => (
-      <ul>
-          <li onClick={this.handleDesignerClick}>Designer</li>
-          <li onClick={this.handleDeveloperClick}>Developer</li>
-      </ul>
-  )
-
-  public toogleDropdown = () => {
-    console.log(!this.state.isOpen);
-    this.props.openProjectsDropdown(!this.state.isOpen);
-    this.setState(prev => ({ isOpen: !prev.isOpen }));
-  }
-
-  public render() {
     return (
-      <>
-            <h1 className="Heading-projects_bg center_margin" onClick={this.toogleDropdown}>Projects as
-            <span>Designer<i className="Icon-arrow_down"></i></span>
-            </h1>
-            {this.state.isOpen && this.toogleList()}
-            </>
+      <div className="Heading-projects-toogle-container">
+        <h1 className="Heading-projects_bg" >Projects as:</h1>
+        <h1 className="Heading-projects_bg Heading-projects-toogle" onClick={this.changeGrid}>{projectsGrid}</h1>
+      </div>
     );
   }
 }
 
-function mapDispatchToProps(dispatch: (arg0: object) => void) {
+function mapDispatchToProps(dispatch: (arg0: object) => void): ProjectsHeadingProps {
   return {
-    openProjectsDropdown: (toogle:boolean) => dispatch(openProjectsDropdown(toogle)),
+    openProjectsDropdown: (toogle: boolean) => dispatch(openProjectsDropdown(toogle)),
     changeProjectsGrid: (type: string) => dispatch(changeProjectsGrid(type)),
   };
 }
 
-const ProjectsHeading = connect(null, mapDispatchToProps)(ProjectsHeadingConnected);
+const mapStateToProps = (state: ProjectsHeadingProps) => ({ projectsGrid: state.projectsGrid });
+
+const ProjectsHeading = connect(mapStateToProps, mapDispatchToProps)(ProjectsHeadingConnected);
 
 export default ProjectsHeading;

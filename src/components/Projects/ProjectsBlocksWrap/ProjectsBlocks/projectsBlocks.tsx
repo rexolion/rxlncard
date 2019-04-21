@@ -2,6 +2,7 @@ import React, { ReducerState } from 'react';
 
 import { graphql, StaticQuery } from 'gatsby';
 import { connect } from 'react-redux';
+import ProjectsBlocksButton from './ProjectBlocksButton/projectBlocksButton';
 import './projectsBlocks.css';
 import ProjectsBlocksItem from './ProjectsBlocksItem/projectsBlocksItem';
 
@@ -11,7 +12,7 @@ export interface ProjectsData {
   previewImg: string;
   technologies: string;
   type: string;
-  relativePath?: string;
+  relativePath: string;
 }
 
 export interface ProjectsNode {
@@ -25,7 +26,7 @@ export interface ProjectsBlocksComponentProps {
 
 export interface ProjectsBlocksComponentState {
   filteredArr: ProjectsNode[] | [];
-  loadedArr: ProjectsNode[] | [];
+  loadedArr: ProjectsNode[];
   currGrid: string;
 }
 
@@ -49,13 +50,12 @@ class ProjectsBlocksComponent extends React.Component<ProjectsBlocksComponentPro
     }
   }
   public render(): JSX.Element {
-    const { projects } = this.props;
     const { loadedArr } = this.state;
     return (
-            <ul className="Projects-blocks">
-                {loadedArr.map((val: ProjectsNode, ind: number) => <ProjectsBlocksItem node={val.node} key={ind} />)}
-                <button onClick={this.handleButtonClick}/>
-            </ul>
+      <ul className="Projects-blocks">
+        {loadedArr.map((val: ProjectsNode, ind: number) => <ProjectsBlocksItem node={val.node} key={ind} />)}
+        <ProjectsBlocksButton moreOnClick={this.handleButtonClick} />
+      </ul>
     );
   }
 
@@ -63,10 +63,10 @@ class ProjectsBlocksComponent extends React.Component<ProjectsBlocksComponentPro
     this.loadMore();
   }
 
-  private loadFiltered() {
+  private loadFiltered(): void {
     let filtered: ProjectsNode[] | [] = [];
     const projects = this.props.projects;
-    const propGrid =  this.props.projectsGrid;
+    const propGrid = this.props.projectsGrid;
 
     switch (propGrid) {
       case 'Designer':
@@ -82,7 +82,7 @@ class ProjectsBlocksComponent extends React.Component<ProjectsBlocksComponentPro
 
   private loadMore(): void {
     const filtered = this.state.filteredArr;
-    const loaded = filtered.splice(0, 4);
+    const loaded = filtered.splice(0, 5);
 
     this.setState(prev => ({ loadedArr: [...prev.loadedArr, ...loaded] }));
   }
@@ -93,9 +93,9 @@ interface ConnectedProjectsBlocksProps {
 }
 
 const ConnectedProjectsBlocks: React.FunctionComponent<ConnectedProjectsBlocksProps> = ({ projectsGrid }) => (
-    <StaticQuery
-        query={
-            graphql`
+  <StaticQuery
+    query={
+      graphql`
             query ProjectsQuery {
                 allProjectsJson {
                     edges {
@@ -110,16 +110,16 @@ const ConnectedProjectsBlocks: React.FunctionComponent<ConnectedProjectsBlocksPr
                 }
             }
         `
-        }
+    }
 
-        render={data => (
-            <ProjectsBlocksComponent projectsGrid={projectsGrid} projects={data.allProjectsJson.edges} />
-        )
-        }
-    />
+    render={data => (
+      <ProjectsBlocksComponent projectsGrid={projectsGrid} projects={data.allProjectsJson.edges} />
+    )
+    }
+  />
 );
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: ProjectsBlocksComponentProps) => {
   return { projectsGrid: state.projectsGrid };
 };
 

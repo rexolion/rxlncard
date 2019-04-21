@@ -1,6 +1,7 @@
 .Footer-goto_card.Footer-goto_card{
     height: 70px;
     width: 70px;
+    border-radius: 5px;
     top: 0;
     position: absolute;
     background-color: gray;

@@ -1,6 +1,8 @@
 .Text-para_bg {
-    font-size: calc(23px + (49 - 23) * ((100vw - 300px) / (1600 - 300)));
-    padding-bottom: 3vh !important;
+    font-size: calc(17px + (33 - 17) * ((100vw - 300px) / (1600 - 300)));
+    margin-top: .8em;
     min-width: 50vw;
+    line-height: .8em;
     font-weight: 300;
+    padding-bottom: 0;
 }

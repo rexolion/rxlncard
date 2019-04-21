@@ -5,8 +5,7 @@
     margin: 0;
 }
 .Frontend-block_bl.Frontend-block_bl {
-    min-height: 50vh;
-    background-color: black;
-    height: auto;
+    background-color: #101010;
+    height: 100%;
 
 }

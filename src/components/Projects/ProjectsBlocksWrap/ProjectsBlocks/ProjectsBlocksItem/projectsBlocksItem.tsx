@@ -25,7 +25,7 @@ interface ProjectItemQueryData {
   };
 }
 
-const ProjectsBlocksItemComponent:React.FunctionComponent<ProjectItemProps> = ({ node, children }) => (
+const ProjectsBlocksItemComponent:React.FunctionComponent<ProjectItemProps> = ({ node, children  }) => (
     <li className="Projects-blocks-item Projects-blocks-one">
         {children}
     </li>

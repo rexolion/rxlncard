@@ -1,5 +1,5 @@
 .Text-small_bg {
-    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
-    font-weight: 400;
+    font-size: calc(13px + (16 - 13) * ((100vw - 300px) / (1600 - 300)));
+        font-weight: 400;
     border-bottom: solid 2px;
 }
