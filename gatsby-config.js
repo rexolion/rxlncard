@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    pathPrefix: '/rxlncard',
+    pathPrefix: '/rxlncard/',
     title: `Alekseev Artyom | Frontend developer`,
     description: `Alekseev Artyom - frontend developer and designer`,
     author: `@rexolion`,
