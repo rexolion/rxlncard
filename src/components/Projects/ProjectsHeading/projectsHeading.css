@@ -30,3 +30,29 @@
    align-items: center;
    width: 100%;
  }
+ .Button-container {
+  width: 420px;
+  display: flex;
+    border-radius: 5px;
+  height: 56px;
+  background-color: #CCC8C8;
+}
+.Button {
+  transition: all .5s ease;
+  cursor: pointer;
+  width: 50%;
+  text-decoration: none;
+  outline: none;
+  border-radius: 5px;
+  border: 0;
+  color: #fff;
+  font-weight: 500;
+font-size: 20px;
+
+}
+.Button_primary {
+  background-color: #A507BE;
+  
+}
+.Button_secondary {
+}

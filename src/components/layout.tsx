@@ -27,9 +27,9 @@ class Layout extends React.Component<LayoutProps, LayoutState> {
           <Frontend/>
           <FrontendPara/>
           <Design/>
-          <Divider/>
+          <Divider size="md"/>
           <DesignDetails/>
-          <Divider/>
+          <Divider size="lg"/>
           <Projects/>
           <Footer/>
       </>

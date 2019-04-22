@@ -2,8 +2,12 @@ import * as React from 'react';
 
 import './divider.css';
 
-const Divider = () => (
-    <div className="Divider"></div>
+interface DividerProps {
+    size: string;
+}
+
+const Divider:React.FunctionComponent<DividerProps> = ({size}) => (
+    <div className={`Divider_${size}`}></div>
 );
 
 export default Divider;

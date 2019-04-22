@@ -1,3 +1,7 @@
-.Divider {
+.Divider_md {
     height: 100px;
+}
+
+.Divider_lg {
+    height: 150px;
 }
