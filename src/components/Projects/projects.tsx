@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { RefObject } from 'react';
 
 import './projects.css';
 import ProjectsBlocks from './ProjectsBlocksWrap/ProjectsBlocks/projectsBlocks';
 import ProjectsDivider from './ProjectsDivider/projectsDivider';
 import ProjectsHeading from './ProjectsHeading/projectsHeading';
 
-const Projects = () => (
-    <section className="Projects">
+interface ProjectsProps {
+    projRef: RefObject<HTMLElement>;
+}
+
+const Projects:React.FunctionComponent<ProjectsProps> = ({ projRef }) => (
+    <section ref={projRef} className="Projects">
             <ProjectsHeading/>
             <ProjectsDivider/>
             <ProjectsBlocks/>

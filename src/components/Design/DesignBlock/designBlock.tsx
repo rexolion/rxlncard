@@ -3,9 +3,13 @@ import * as React from 'react';
 import './designBlock.css';
 import DesignBlockText from './DesignBlockText/designBlockText';
 
-const DesignBlock = () => (
+interface DesignBlockProps {
+  scrollToProjects: () => void;
+}
+
+const DesignBlock: React.FunctionComponent<DesignBlockProps> = ({ scrollToProjects }) => (
     <div className="Design-block Design-block_purp">
-            <DesignBlockText/>
+            <DesignBlockText scrollToProjects={scrollToProjects} />
     </div>
 );
 

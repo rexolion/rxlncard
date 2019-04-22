@@ -5,11 +5,15 @@ import DesignBlockTextHeading from './DesignBlockTextHeading/designBlockTextHead
 import DesignBlockTextPara from './DesignBlockTextPara/designBlockTextPara';
 import DesignBlockTextSmall from './DesignBlockTextSmall/designBlockTextSmall';
 
-const DesignBlockText = () => (
+interface DesignBlockTextProps {
+  scrollToProjects: () => void;
+}
+
+const DesignBlockText: React.FunctionComponent<DesignBlockTextProps> = ({ scrollToProjects }) => (
     <div className="Text-box">
             <DesignBlockTextHeading/>
             <DesignBlockTextPara/>
-            <DesignBlockTextSmall/>
+            <DesignBlockTextSmall scrollToProjects={scrollToProjects} />
     </div>
 );
 

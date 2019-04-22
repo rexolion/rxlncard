@@ -5,11 +5,15 @@ import FrontendBlockTextHeading from './FrontendBlockTextHeading/frontendBlockTe
 import FrontendBlockTextPara from './FrontendBlockTextPara/frontendBlockTextPara';
 import FrontendBlockTextSmall from './FrontendBlockTextSmall/frontendBlockTextSmall';
 
-const FrontendBlockText = () => (
+interface FrontendBlockTextProps {
+  scrollToProjects: () => void;
+}
+
+const FrontendBlockText: React.FunctionComponent<FrontendBlockTextProps> = ({ scrollToProjects }) => (
     <div className="Text-box">
         <FrontendBlockTextHeading/>
         <FrontendBlockTextPara/>
-        <FrontendBlockTextSmall/>
+        <FrontendBlockTextSmall scrollToProjects={scrollToProjects} />
     </div>
 );
 

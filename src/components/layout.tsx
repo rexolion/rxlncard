@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { RefObject } from 'react';
 
 import Design from './Design/design';
 import DesignDetails from './DesignDetails/designDetails';
@@ -14,24 +14,37 @@ import SEO from './SEO/seo';
 export interface LayoutProps {
 }
 
-export interface LayoutState {
-
+export interface LayoutRef {
+  projRef: RefObject<HTMLElement>;
 }
 
-class Layout extends React.Component<LayoutProps, LayoutState> {
+class Layout extends React.Component<LayoutProps, LayoutRef> {
+  public projRef = React.createRef<HTMLDivElement>();
+
+  constructor(props: LayoutProps) {
+    super(props);
+
+  }
+
+  public scrollToProjects = () => {
+    if (this.projRef.current !== null) {
+      this.projRef.current.scrollIntoView();
+    }
+  }
+
   public render(): JSX.Element {
     return (
       <>
           <SEO keywords={['gatsby', 'application', 'react']} />
           <Hero/>
-          <Frontend/>
+          <Frontend scrollToProjects={this.scrollToProjects} />
           <FrontendPara/>
-          <Design/>
+          <Design scrollToProjects={this.scrollToProjects} />
           <Divider size="md"/>
           <DesignDetails/>
-          <Divider size="lg"/>
-          <Projects/>
-          <Footer/>
+          <Divider size="md"/>
+          <Projects projRef={this.projRef}/>
+          <Footer />
       </>
     );
   }

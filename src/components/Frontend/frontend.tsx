@@ -3,9 +3,13 @@ import * as React from 'react';
 import './frontend.css';
 import FrontendBlock from './FrontendBlock/frontendBlock';
 
-const Frontend = () => (
+interface FrontendProps {
+  scrollToProjects: () => void;
+}
+
+const Frontend: React.FunctionComponent<FrontendProps> = ({ scrollToProjects }) => (
     <section id="frontend" className="Frontend">
-        <FrontendBlock/>
+        <FrontendBlock scrollToProjects={scrollToProjects} />
     </section>
 );
 
