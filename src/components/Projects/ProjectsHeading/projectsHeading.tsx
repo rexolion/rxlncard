@@ -49,23 +49,24 @@ class ProjectsHeadingConnected extends React.Component<ProjectsHeadingProps, Pro
     }
 
   }
+
   public changeGridSec = () => {
     if (this.state.secondButtonPressed === false && this.props.changeProjectsGrid !== undefined) {
       const invertedGrid = this.invertGrid(this.props.projectsGrid);
       this.props.changeProjectsGrid(invertedGrid);
       this.changeButtonsStateByGrid(invertedGrid);
     }
-
   }
 
+  public changeStyleByPress = (pressed: boolean): string =>  pressed ? 'Button Button_primary' : 'Button Button_secondary';
+
   public render(): JSX.Element {
-    const { projectsGrid } = this.props;
     const { secondButtonPressed, firstButtonPressed } = this.state;
 
     return (
       <div className="Button-container">
-        <button onClick={this.changeGridFirs} className={firstButtonPressed ? 'Button Button_primary' : 'Button Button_secondary'}>Designer</button>
-        <button onClick={this.changeGridSec} className={secondButtonPressed ? 'Button Button_primary' : 'Button Button_secondary'} >Developer</button>
+        <button onClick={this.changeGridFirs} className={this.changeStyleByPress(firstButtonPressed)}>Designer</button>
+        <button onClick={this.changeGridSec} className={this.changeStyleByPress(secondButtonPressed)} >Developer</button>
       </div>
     );
   }

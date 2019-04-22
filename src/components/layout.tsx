@@ -19,7 +19,7 @@ export interface LayoutRef {
 }
 
 class Layout extends React.Component<LayoutProps, LayoutRef> {
-  public projRef = React.createRef<HTMLDivElement>();
+  public projRef: RefObject<HTMLDivElement> = React.createRef<HTMLDivElement>();
 
   constructor(props: LayoutProps) {
     super(props);
