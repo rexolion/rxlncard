@@ -4,3 +4,9 @@
     display: inline-block;
     background-color: firebrick;
   }
+
+  @media screen and (max-width: 600px) {
+    .Design-image {
+      display: none;
+    }
+  }

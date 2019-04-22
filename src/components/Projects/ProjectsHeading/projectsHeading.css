@@ -55,3 +55,9 @@ font-size: 20px;
   background-color: #A507BE;
   
 }
+
+@media screen and (max-width: 600px) {
+  .Button-container {
+    width: 340px;
+  }
+}

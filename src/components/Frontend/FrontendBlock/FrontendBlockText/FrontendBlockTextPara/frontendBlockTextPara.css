@@ -6,3 +6,9 @@
     font-weight: 300;
     padding-bottom: 0;
 }
+
+@media screen and (max-width: 600px) {
+  .Text-para_bg {
+    line-height: 1.5em;
+  }
+}

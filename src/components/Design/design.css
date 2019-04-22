@@ -3,3 +3,8 @@
     height: 50vh;
 
 }
+@media screen and (max-width: 600px) {
+  .Design {
+      padding: 0;
+  }
+}

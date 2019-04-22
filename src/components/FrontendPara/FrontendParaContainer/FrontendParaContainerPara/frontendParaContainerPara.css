@@ -5,3 +5,9 @@
     color: #606060;
 
 }
+
+@media screen and (max-width: 600px) {
+  .Frontend-para-para {
+      width: auto;
+  }
+}
