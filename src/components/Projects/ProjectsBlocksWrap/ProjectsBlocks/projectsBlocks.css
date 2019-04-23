@@ -9,3 +9,10 @@
   .Projects-blocks-more {
     grid-auto-flow: dense;
   }
+
+  @media screen and (max-width: 600px) {
+    .Projects-blocks {
+      grid-auto-rows: 137px;
+      grid-template-columns: repeat(auto-fill, minmax(107px,100vw));
+    }
+  }

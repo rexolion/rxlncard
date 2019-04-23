@@ -1,4 +1,6 @@
 .Design-para-para {
     color: #707070;
+    margin:0;
   font-size: calc(22px + (24 - 22) * ((100vw - 300px) / (1600 - 300)));
 }
+

@@ -5,3 +5,8 @@
 .Divider_lg {
     height: 150px;
 }
+@media screen and (max-width: 600px) {
+  .Divider_md {
+      display: none;
+  }
+}

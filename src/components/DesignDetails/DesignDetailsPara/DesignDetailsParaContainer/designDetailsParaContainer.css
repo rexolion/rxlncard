@@ -7,3 +7,10 @@
     left: 50%;
     transform: translate(-50%,-50%);
   }
+
+  @media screen and (max-width: 600px) {
+    .Design-para-container {
+      text-align: left;
+      width: 80%;
+    }
+  }
