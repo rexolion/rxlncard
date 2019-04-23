@@ -2,8 +2,8 @@
     display: inline-flex;
     width: 22vw;
     margin: 0;
-    font-size: calc(22px + (24 - 22) * ((100vw - 300px) / (1600 - 300)));
-    color: #606060;
+    font-size: calc(19px + (24 - 19) * ((100vw - 300px) / (1600 - 300)));
+        color: #606060;
 
 }
 
